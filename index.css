@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+header {
+  font-size: 2rem;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(45deg, white, gray, gray, white);
+}
+
+main {
+  padding: 20px;
+  display: grid;
+  grid-template: 300px / repeat(5, 300px);
+  grid-auto-rows: 300px;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  background-color: green;
+}
+
+footer:hover {
+  scale: 105%;
+}
+
+.book {
+  border-radius: 16px;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.book p,
+.book label {
+  font-size: 1.4rem;
+}
+
+.book input {
+  height: 20px;
+  width: 20px;
+}
+
+.book button {
+  border: none;
+  border-radius: 12px;
+  background-color: firebrick;
+  color: darkgrey;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 6px 12px;
+}
+
+.book button:hover {
+  scale: 105%;
+}
+
+.read {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+dialog[open] {
+  padding: 30px;
+  border-radius: 20px;
+  position: absolute;
+  top: 35vh;
+  left: 40vw;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+dialog > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+dialog::backdrop {
+  background-color: black;
+  opacity: 0.4;
+}
+
+.modal__exit {
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form p {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}

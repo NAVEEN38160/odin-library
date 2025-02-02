@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn vanilla</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>the library.</header>
+    <main>
+      <div class="book">
+        <p>Title: Brothers Karamazov</p>
+        <p>Author: Fyodor Dostoevsky</p>
+        <p>Pages: 865</p>
+        <p class="read"><label>Read: </label><input type="checkbox" /></p>
+        <button>Remove</button>
+      </div>
+    </main>
+    <footer>add book +</footer>
+    <dialog>
+      <div>
+        <h3>New book</h3>
+        <button class="modal__exit">X</button>
+      </div>
+      <form method="dialog">
+        <p>
+          <label for="title">Title: </label>
+          <input type="text" name="title" id="title" required />
+        </p>
+        <p>
+          <label for="author">Author: </label>
+          <input type="text" name="author" id="author" required />
+        </p>
+        <p>
+          <label for="pages">Pages: </label>
+          <input type="number" name="pages" id="pages" required />
+        </p>
+        <p>
+          <label for="read">Read: </label>
+          <input type="checkbox" name="read" id="read" />
+        </p>
+        <button>Add</button>
+      </form>
+    </dialog>
+    <script src="index.js"></script>
+  </body>
+</html>
