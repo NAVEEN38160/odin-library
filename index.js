@@ -24,8 +24,8 @@ function Book(title, author, pages, read, uid) {
   this.uid = uid;
 }
 
-Book.prototype.changeReadStatus = (read) => {
-  this.read = read;
+Book.prototype.changeReadStatus = function () {
+  this.read = !this.read;
 };
 
 const getBookElement = (book) => {
@@ -44,7 +44,6 @@ const getBookElement = (book) => {
 
 const triggerAddDOM = () => {
   main.appendChild(getBookElement(library[library.length - 1]));
-  console.log("array :: ", library);
 };
 
 const triggerRemoveDOM = (index) => {
@@ -60,7 +59,7 @@ const triggerRemoveArray = (index) => {
 
 const triggerStatusChange = (index) => {
   const found = library.find((book) => book.uid === index);
-  found.read = !found.read;
+  found.changeReadStatus();
 };
 
 const refreshAllControls = () => {
