@@ -16,17 +16,31 @@ let uid = 0;
 
 const library = [];
 
-function Book(title, author, pages, read, uid) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.uid = uid;
-}
+// function Book(title, author, pages, read, uid) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+//   this.uid = uid;
+// }
 
-Book.prototype.changeReadStatus = function () {
-  this.read = !this.read;
-};
+// Book.prototype.changeReadStatus = function () {
+//   this.read = !this.read;
+// };
+
+class Book {
+  constructor(title, author, pages, read, uid) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.uid = uid;
+  }
+
+  changeReadStatus() {
+    this.read = !this.read;
+  }
+}
 
 const getBookElement = (book) => {
   const div = document.createElement("div");
